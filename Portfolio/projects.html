@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ani Chaloyan</title>
+<link rel="stylesheet" href="style.css">
+<link rel="aboutme" href="aboutme.html">
+<link rel="myScript" href="myScript.js">
+
+
+<script type="text/javascript">
+var image_list = ["http://i.imgur.com/QaRrsqe.png", "http://i.imgur.com/1jxtWgp.png", "http://i.imgur.com/xdBvSfe.png", "http://i.imgur.com/UBldRgK.png",
+                "http://i.imgur.com/xXN8Gn2.png",  "http://i.imgur.com/oZmTuao.png", "http://i.imgur.com/KUIrMMS.png", "http://i.imgur.com/ddL58uz.png"];
+var project_name = ["Runner Game", "Paddle Ball", "Pig Game", "Playlist", "Mad Libs", "Random Menu Generator", "Obamicon", "Bouncing Ball", ""];
+var item = 0;
+function changeImg(x, y){
+  if (item > image_list.length-1)
+  {
+    item = 0;
+  }
+  document.getElementById(x).src=image_list[item];
+  document.getElementById(y).innerHTML=project_name[item+1];
+  item++;
+}
+</script>
+
+
+<h1> <center> My Projects </center></h1>
+</head>
+
+<body>
+
+<div> <center>
+<img id = "image" src="http://i.imgur.com/ddL58uz.png" alt="Runner Game" style="width:617px;height:441px;" >
+<h3 id = "name"> Runner Game </h3>
+</center>
+</div>
+
+
+<form> <center>
+<p> <br> </p>
+<input type="button" value="Next" onclick="changeImg('image', 'name')"/>
+</center>
+</form> 
+
+</body>
+
+</html>
+
